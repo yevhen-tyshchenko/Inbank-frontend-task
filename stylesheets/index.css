@@ -1,3 +1,89 @@
+/* dark purple: #4B196E */
+/* light purple: 	#79228E */
+/* btn green: #CFF263 */
+/* grey background: #F7F7F7 */
+
+
+.full-width{
+  height: 500px;
+  background: #4B196E;
+  padding: 0;
+}
+
+.wrapper {
+  width: 100%;
+  height: 500px;
+  padding: 0;
+  box-sizing: border-box;
+  background: transparent;
+}
+
+.top {
+  height: 30px;
+  background: #4B196E;
+  margin: 0;
+}
+
+#top-shadow-container {
+  box-shadow: 5px 0 30px black;
+}
+
+.navbar {
+  width: 100%;
+  padding: 0;
+  background: #F7F7F7;
+  justify-content: flex-start;
+  justify-content: space-between;
+}
+
+.navbar-brand {
+  padding: 0;
+}
+
+#top-logo{
+  width: 100px;
+}
+
+.navbar-nav .nav-item {
+  padding: 8px 16px;
+  text-align: center;
+}
+
+.toggle {
+  flex-direction: row;
+}
+
+.rounded-button {
+  width: 100px;
+  height: 30px;
+  padding: 3px;
+  border-radius: 50px;
+  font-size: 14px;
+  text-align: center;
+}
+
+#purple-button {
+  background: linear-gradient(90deg, #79228E 0%, #4B196E 103.85%, #4B196E 103.85%);
+  color: #F7F7F7;
+  align-items: center;
+}
+
+.top-phone-container {
+  color: #F7F7F7;
+  text-align: right;
+  background: linear-gradient(90deg, #79228E 0%, #4B196E 103.85%, #4B196E 103.85%);
+}
+
+#centered-heading {
+  text-align: center;
+  padding-top: 30px;
+  color: #F7F7F7;
+}
+
+.benefits {
+  align: center;
+}
+
 .red {
   background: red;
   height: 500px;
@@ -7,3 +93,26 @@
   background: black;
   height: 500px;
 }
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+
+}
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+
+}
+
+/* Extra large devices (large desktops) */
+/* No media query since the extra-large breakpoint has no upper bound on its width */
