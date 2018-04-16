@@ -5,18 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.0.0/css/bootstrap-slider.min.css">
-    <link rel="stylesheet" href="./stylesheets/index.css">
+    <link rel="stylesheet" href="./stylesheets/index.css?v=1">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
     <title></title>
   </head>
   <body>
-    <div class="container-fluid full-width">
-      <div class="container wrapper">
+    <div class="container-fluid top-purple">
+      <div class="container content-wrapper">
         <div class="row top">
           <div class="col-2 top-lang">
+            <a href="#">EST</a>
+            <a href="#">RUS</a>
           </div>
-          <div class="col-7">
+          <div class="col-5">
           </div>
-          <div class="col-3 top-links">
+          <div class="col-5 top-links">
+            <a href="#">Business</a>
+            <a href="#">Investor</a>
+            <a href="#">Inbank</a>
           </div>
         </div>
         <div id="top-shadow-container">
@@ -30,13 +36,13 @@
             <div class="collapse navbar-collapse" id="navbar-content">
               <ul class="navbar-nav">
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Deposit <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
                   <a class="nav-link" href="#">Deposit</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Deposit</a>
+                  <a class="nav-link" href="#">Loan</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Hirepurchase</a>
                 </li>
                 <li class="nav-item">
                   <button type="button" class="btn rounded-button" id="purple-button">Log in</button>
@@ -46,37 +52,216 @@
             </div>
           </nav>
           <div class="top-phone-container">
-            <p>+37256738622</p>
+            <div id="right-align">
+                <img class="icon" src="./images/phone-icon.png" alt=""><p>+37256738622</p>
+            </div>
           </div>
         </div>
-        <h1 id="centered-heading">Lorem ipsum dolores</h1>
+        <h1 class="centered-heading white">Lorem ipsum dolores</h1>
         <div class="row justify-content-center">
           <div class="col-sm-3 benefits">
-            Some benefits
+            <img class="icon" src="./images/tick-icon.png"><p>Some benefits</p>
           </div>
           <div class="col-sm-3 benefits">
-            Other benefits
+            <img class="icon" src="./images/tick-icon.png"><p>Other benefits</p>
           </div>
           <div class="col-sm-3 benefits">
-            Some more
+            <img class="icon" src="./images/tick-icon.png"><p>More benefits</p>
           </div>
         </div>
         <div class="row sliders-section">
-          <div class="col-sm-8 sliders">
+          <div class="col-md-8 sliders">
             <div class="slider-container">
-                <input class="slider" id="amount-slider" type="range" data-slider-min="1000" data-slider-max="4000" data-slider-step="1" data-slider-value="1500"/>
+                <p class="slider-label white">Amount</p>
+                <input class="slider" id="amount-slider" type="range"
+                  data-slider-min="1000"
+                  data-slider-max="4000"
+                  data-slider-step="1"
+                  data-slider-value="1500"
+                  data-slider-tooltip="show"/>
+            </div>
+            <div class="slider-range white">
+              <span class="left-bound">1 000 eur</span>
+              <span>4 000 eur</span>
             </div>
             <div class="slider-container">
-                <input class="slider" id="period-slider" type="range" data-slider-min="1" data-slider-max="4" data-slider-step="1" data-slider-value="3"/>
-            </div>
+                <p class="slider-label white">Period</p>
+                <input class="slider" id="period-slider" type="range"
+                  data-slider-min="1"
+                  data-slider-max="4"
+                  data-slider-step="1"
+                  data-slider-value="3"
+                  data-slider-tooltip="show"/>
 
+            </div>
+            <div class="slider-range white">
+              <span class="left-bound">1 000 eur</span>
+              <span>4 000 eur</span>
+            </div>
           </div>
-          <div class="col-sm-4 cal">
-            <p>Lorem ipsum dolores</p>
-            <span id="calculated-amount">3</span>
+          <div class="col-md-4 result-amount-col">
+            <p class="result-text">Lorem ipsum dolores</p>
+            <span class="result-text" id="result-amount"></span>
+            <p class="result-text underlined">Lorem ipsum some footer text</p>
+          </div>
+            <button type="button" class="btn rounded-button" id="green-button">Apply</button>
+        </div>
+        <p class="result-text white">If you are already client, <span class="underlined">log in</span></p>
+      </div>
+    </div>
+    <div class="container-fluid info-section">
+      <div class="container content-wrapper">
+        <nav aria-label="breadcrumb" class="in-page-nav">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Deposits</li>
+          </ol>
+        </nav>
+        <div class="row info">
+          <div class="col-md-9 info-text purple">
+            <h1>Lorem ipsum dolores</h1>
+            <h2>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h2>
+            <p id="text-para">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+              It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
+          </div>
+          <div class="col-md-2 img-container">
+            <img src="./images/question-img.png" id="question-img"/>
           </div>
         </div>
+        <ul class="nav bottom-nav">
+          <li class="nav-item">
+            <a class="nav-link active" id="first" data-toggle="tab" href="#first-tab" role="tab" aria-controls="first" aria-selected="true">First Tab</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="second" data-toggle="tab" href="#second-tab" role="tab" aria-controls="second" aria-selected="false">Second Tab</a>
+          </li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane fade show active" id="first-tab" role="tabpanel" aria-labelledby="first">
+            <div class="row deposit-features" >
+              <div class="col-md-6">
+                <p class="features-header">Term deposit is for you if</p>
+                <div class="row-elems">
+                  <img class="icon" src="./images/tick-icon-purple.png"><p>Some benefits</p>
+                </div>
+                <div class="row-elems">
+                  <img class="icon" src="./images/tick-icon-purple.png"><p>Some benefits</p>
+                </div>
+                <div class="row-elems">
+                  <img class="icon" src="./images/tick-icon-purple.png"><p>Some benefits</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <p class="features-header">Flexible deposit is for you if</p>
+                <div class="row-elems">
+                  <img class="icon" src="./images/tick-icon-purple.png"><p>Some benefits</p>
+                </div>
+                <div class="row-elems">
+                  <img class="icon" src="./images/tick-icon-purple.png"><p>Some benefits</p>
+                </div>
+                <div class="row-elems">
+                  <img class="icon" src="./images/tick-icon-purple.png"><p>Some benefits</p>
+                </div>
+              </div>
+              <div id="centered-button">
+                  <button type="button" class="btn rounded-button" id="purple-button">Compare deposits</button>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="second-tab" role="tabpanel" aria-labelledby="second">
+            <div class="row deposit-features">
+              <div class="col-md-6">
+                <p class="features-header">Term deposit is definitely for you...</p>
+                <div class="row-elems">
+                  <img class="icon" src="./images/tick-icon-purple.png"><p>Some benefits</p>
+                </div>
+                <div class="row-elems">
+                  <img class="icon" src="./images/tick-icon-purple.png"><p>Some benefits</p>
+                </div>
+                <div class="row-elems">
+                  <img class="icon" src="./images/tick-icon-purple.png"><p>Some benefits</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <p class="features-header">Flexible deposit is definitely for you...</p>
+                <div class="row-elems">
+                  <img class="icon" src="./images/tick-icon-purple.png"><p>Some benefits</p>
+                </div>
+                <div class="row-elems">
+                  <img class="icon" src="./images/tick-icon-purple.png"><p>Some benefits</p>
+                </div>
+                <div class="row-elems">
+                  <img class="icon" src="./images/tick-icon-purple.png"><p>Some benefits</p>
+                </div>
+              </div>
+              <div id="centered-button">
+                  <button type="button" class="btn rounded-button" id="purple-button">Compare deposits</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid footer">
+      <div class="container content-wrapper">
+        <div class="row">
+          <div class="col-lg-3 footer-column">
+            <p class="col-header white">Private customer</p>
+            <ul class="footer-links">
+              <li class="link-item"><a class="white" href="#">Item1</a></li>
+              <li class="link-item"><a class="white" href="#">Item2</a></li>
+              <li class="link-item"><a class="white" href="#">Item3</a></li>
+              <li class="link-item"><a class="white" href="#">Item4</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 footer-column">
+            <p class="col-header white">Business customer</p>
+            <ul class="footer-links">
+              <li class="link-item"><a class="white" href="#">Item1</a></li>
+              <li class="link-item"><a class="white" href="#">Item2</a></li>
+              <li class="link-item"><a class="white" href="#">Item3</a></li>
+              <li class="link-item"><a class="white" href="#">Item4</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 footer-column">
+            <p class="col-header white">Inbank</p>
+            <ul class="footer-links">
+              <li class="link-item"><a class="white" href="#">Item1</a></li>
+              <li class="link-item"><a class="white" href="#">Item2</a></li>
+              <li class="link-item"><a class="white" href="#">Item3</a></li>
+              <li class="link-item"><a class="white" href="#">Item4</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 footer-column">
+            <p class="col-header white">General</p>
+            <ul class="footer-links">
+              <li class="link-item"><a class="white" href="#">Item1</a></li>
+              <li class="link-item"><a class="white" href="#">Item2</a></li>
+              <li class="link-item"><a class="white" href="#">Item3</a></li>
+              <li class="link-item"><a class="white" href="#">Item4</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="row white">
+          <div class="col-sm-4">
+            <div class="vertical-aligned-row">
+              <img id="footer-logo" src="./images/inbank-footer-logo.png">
+              <p class="footer-text">Inbank AS. Niine 11, 10414 Tallinn.</p>
+            </div>
+          </div>
+          <div class="col-sm-2">
+            <p class="footer-text underlined">info@inbank.ee</p>
 
+          </div>
+          <div class="col-sm-2">
+            <p class="footer-text">+372 640 8080</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid tos">
+      <div class="container content-wrapper">
+          <p>Before signing the contract, carefully read the <span class="underlined"> terms of service </span> or contact and consult with Inbank AS employees.</p>
       </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -85,5 +270,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
     <script src="./scripts/sliders.js"></script>
+    <script src="./scripts/tabs-handler.js"></script>
   </body>
 </html>
